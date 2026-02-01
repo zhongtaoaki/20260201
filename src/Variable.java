@@ -78,7 +78,6 @@ public class Variable {
         System.out.println("char型の初期値は：" + array5[4]);
         System.out.println("double型の初期値は：" + array6[4]);
         System.out.println("boolean型の初期値は：" + array7[4]);
-        
 
         int[][] array8 = new int[5][5];
         int[][] array9 = {

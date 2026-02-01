@@ -72,5 +72,6 @@ public class Operation {
 
         int number3 = number2++;
         System.out.println(number3);
+        
     }
 }
