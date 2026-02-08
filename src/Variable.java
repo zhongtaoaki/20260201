@@ -67,6 +67,19 @@ public class Variable {
         double[] array6 = new double[5];
         boolean[] array7 = new boolean[5];
 
+        int[] array8 = new int[4];
+        array8[0] = 1;
+        array8[1] = 2;
+        array8[2] = 3;
+        array8[3] = 4;
+        
+        int[] array9 = {};
+
+        Double i = null;
+        System.out.println(i);
+
+        double[] array10 = {0 ,1.0};
+
         // 配列の使用
         // インデックスを利用することで要素を使う
         // 最後の要素のインデックスは、length-1
@@ -79,19 +92,19 @@ public class Variable {
         System.out.println("double型の初期値は：" + array6[4]);
         System.out.println("boolean型の初期値は：" + array7[4]);
 
-        int[][] array8 = new int[5][5];
-        int[][] array9 = {
-            {1,1,3,4,5}, 
-            {5,2,3,4,5}, 
-            {1,3,4,2,5}, 
-            {6,5,3,4,6}, 
-            {9,4,5,6,7}
-        };
-        array8[0][0] = 1;
-        array8[4][2] = 1;
+        // int[][] array8 = new int[5][5];
+        // int[][] array9 = {
+        //     {1,1,3,4,5}, 
+        //     {5,2,3,4,5}, 
+        //     {1,3,4,2,5}, 
+        //     {6,5,3,4,6}, 
+        //     {9,4,5,6,7}
+        // };
+        // array8[0][0] = 1;
+        // array8[4][2] = 1;
 
-        // System.out.println(array9[4][2]);
-        System.out.println(array8[3][1]);
+        // // System.out.println(array9[4][2]);
+        // System.out.println(array8[3][1]);
         
     }
 }
