@@ -28,6 +28,8 @@ public class Manjyu {
     int expirationDate;
     String taste;
 
+    static String type = "和菓子";
+
     // フィールドの使用
     // フィールドの使用はメソッド内
     // オブジェクト.フィールドのことで使用する
@@ -54,6 +56,23 @@ public class Manjyu {
 
         Manjyu chocoManjyu = new Manjyu("チョコまんじゅ", "チョコ色", 30, "チョコ");
         chocoManjyu.printFields();
+
+        Manjyu machaManjyu1 = new Manjyu("富士山抹茶まんじゅ", "Green", 30, "macha");
+
+        Manjyu machaManjyu2 = new Manjyu("富士山抹茶まんじゅ", "Green", 30, "macha");
+
+        machaManjyu1.compareManjyu(machaManjyu2);
+        getType();
+
+        System.out.println(Manjyu.getType());
+
+        Method.getSeason(4);
+
+        System.out.println(machaManjyu1.name);
+
+        System.out.println(Manjyu.type);
+
+        Manjyu.type = "洋菓子";
 
     }
 
@@ -82,5 +101,20 @@ public class Manjyu {
     // まんじゅの種類を比較するメソッド 全ての属性が一致しなければならない
     // input まんじゅう二つ
     // output boolean
+    public boolean compareManjyu(Manjyu manjyu) {
 
+        return this.name == manjyu.name
+                && this.color == manjyu.color
+                && this.expirationDate == manjyu.expirationDate
+                && this.taste == manjyu.taste;
+
+    }
+
+    // staticが付いているメソッドは、クラスに所属し、付いていないほうはオブジェクトに所属
+    // staticメソッドはクラス名.メソッド名で使用する必要がある、もし使用する場所は同じクラスである場合、クラス名省略可能
+    // フィールドでも使える
+    // 使い方一緒
+    public static String getType() {
+        return "和菓子";
+    }
 }
