@@ -1,4 +1,4 @@
-public class Manjyu {
+public class Manjyu extends Goods {
 
     // manjyu
     // このまんじゅうは、緑で、山の形状、産地は静岡、賞味期限は３・22まで、味は抹茶味、名前は富士山抹茶まんじゅ
@@ -23,12 +23,15 @@ public class Manjyu {
     // フィールドの宣言
     // フィールドの宣言はクラス内、メソッド外
     // フィールドは、変数である、タイプ 変数名 初期化しない
-    String name;
-    String color;
-    int expirationDate;
-    String taste;
+    // public String name;
+    public int price;
+    public String maker;
 
-    static String type = "和菓子";
+    public static String type = "和菓子";
+
+    public String color;
+    public int expirationDate;
+    public String taste;
 
     // フィールドの使用
     // フィールドの使用はメソッド内
