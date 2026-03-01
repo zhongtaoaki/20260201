@@ -1,16 +1,13 @@
 public class Practice5 {
 
-    // class Weapon (super class) { attack() }
-    // class Sword
-    // class Gun
+    // 練習１
+    // 配列をソートするメソッドを、二つ以上用意
+    // ストラテジーデザインパターンで実現
 
-    // class Player
-    // Weapon
-
-    // class Practice5
-    // Player1 Player2
-
-    public void attack() {
-        System.out.println("攻撃しました");
-    }
+    // 練習２
+    // じゃんけんのゲームを作りましょう
+    // Player2人がいる。
+    // １０試合を行い、勝ったら１点取る、負けても減点しない
+    // Player1は、順番でぐー、パー、チョッキを出す
+    // Player2は、ランダムで出す Random.nextInt()
 }

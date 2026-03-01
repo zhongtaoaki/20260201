@@ -1,8 +1,4 @@
-// 多態性
-// ポリモーフィズム
-// 条件１：継承関係がある
-// 条件２：オーバーライドがある
-// 条件３：親クラスのポインターが子クラスに指している
+
 public class Practice4 {
 
     public static void main(String[] args) {
