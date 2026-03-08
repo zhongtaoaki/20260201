@@ -1,4 +1,4 @@
-package StrategyDesignPattern;
+package strategyDesignPattern;
 
 public class Sword extends Weapon {
 

@@ -1,4 +1,4 @@
-package StrategyDesignPattern;
+package strategyDesignPattern;
 
 // ファクトリーデザインパターン
 public class WeaponFactory {

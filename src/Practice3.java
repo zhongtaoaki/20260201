@@ -1,4 +1,4 @@
-import Day4.VariablArray;
+import day4.VariablArray;
 
 public class Practice3 {
 
