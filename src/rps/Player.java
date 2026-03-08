@@ -1,4 +1,11 @@
 package rps;
+// ポリモーフィズム
+
+// 条件１： 継承
+// 条件２： 子クラスが親クラスのメソッドをオーバーライドする
+// 条件３： 親クラスのポインターが子クラスに指している
+
+// コンパイルは親クラスをみる、ランタイムは子クラスを見る
 
 /**
  * プレーヤークラス
@@ -8,6 +15,23 @@ public class Player {
 
     private String name;
     private RPSStrategy strategy;
+    private int point = 0;
+
+    public int getPoint() {
+        return point;
+    }
+
+    /**
+     * 勝敗の結果によって点数を付き加える
+     * 勝ったら一点追加、引き分けもしくは負けたら点数維持
+     * 
+     * @param point
+     */
+    public void setPoint(int point) {
+        if (point == 1) {
+            this.point++;
+        }
+    }
 
     public RPSStrategy getStrategy() {
         return strategy;
@@ -29,8 +53,12 @@ public class Player {
         this.name = name;
     }
 
+    /**
+     * 手を出す
+     * 
+     * @return ぐー、チョキ、パーの三つのうちどれかを返す
+     */
     public Hand getHands() {
-
-        return new Hand();
+        return this.strategy.getHands();
     }
 }

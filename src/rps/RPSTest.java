@@ -11,29 +11,42 @@ public class RPSTest {
 
    public static void main(String[] args) {
 
-      // Step1 2人のプレイヤーを出馬してもらう
+      // Step1 2人のプレイヤーを出馬してもらう DONE
       Player player1 = new Player("ZhangSan");
       Player player2 = new Player("LiSan");
 
-      // Step2 2人のプレイヤーがそれぞれ違うストラテジーを装備する
+      // Step2 2人のプレイヤーがそれぞれ違うストラテジーを装備する DONE
       player1.setStrategy(new RandomStrategy());
       player2.setStrategy(new SequenceStrategy());
 
-      // Step3 2人のプレイヤーを対戦してもらう
-      // Step3.1 2人のプレイヤーがそれぞれハンズを出してもらう
-      Hand handOfPlayer1 = player1.getHands();
-      Hand handOfPlayer2 = player2.getHands();
-
       // Step3.2 2人が出したハンズを比較し、結果を出す
-      int result = handOfPlayer1.compare(handOfPlayer2);
 
       // Step4 10回戦まで続けてもらう
 
-      for (int i = 0; i < args.length; i++) {
-
+      for (int i = 0; i < 10; i++) {
+         // Step3 2人のプレイヤーを対戦してもらう
+         // Step3.1 2人のプレイヤーがそれぞれハンズを出してもらう
+         Hand handOfPlayer1 = player1.getHands();
+         Hand handOfPlayer2 = player2.getHands();
+         int result = handOfPlayer1.compare(handOfPlayer2);
+         player1.setPoint(result);
+         player2.setPoint(-result);
+         System.out.println((i + 1) + "回戦");
+         System.out.println(player1.getName() + "が出した手は：" + handOfPlayer1.getName());
+         System.out.println(player2.getName() + "が出した手は：" + handOfPlayer2.getName());
+         System.out.println(result);
       }
 
+      System.out.println(player1.getName() + ": " + player1.getPoint());
+      System.out.println(player2.getName() + ": " + player2.getPoint());
       // Step5 得点を計算し、勝敗を宣言する
-      // result1 + result2 + result3
+      if (player1.getPoint() == player2.getPoint()) {
+         System.out.println("引き分け");
+      } else if (player1.getPoint() > player2.getPoint()) {
+         System.out.println(player1.getName() + "の勝つ");
+      } else {
+         System.out.println(player2.getName() + "の勝つ");
+      }
+
    }
 }
