@@ -6,11 +6,19 @@ public class Main {
 
         Trigger trigger = new Trigger();
 
-        trigger.addSubscriber(new PC());
-        trigger.addSubscriber(new TV());
-        trigger.addSubscriber(new Phone());
+        Device pc = new PC();
+        pc.setCategory("熱血");
+        trigger.addSubscriber(pc);
 
-        trigger.publish();
+        Device tv = new TV();
+        tv.setCategory("日常");
+        trigger.addSubscriber(tv);
+
+        Device phone = new Phone();
+        phone.setCategory("異世界");
+        trigger.addSubscriber(phone);
+
+        trigger.publish("NEW パンティ＆ストッキング with ガーターベルト", "熱血");
 
     }
 }
